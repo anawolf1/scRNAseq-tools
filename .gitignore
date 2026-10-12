@@ -1,0 +1,30 @@
+# --- your dataset and results: never commit these -----------------------------
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+results/*
+!results/.gitkeep
+
+# --- your dataset-specific settings and decisions: never commit these ---------
+workflows/*/config/params_override.R
+workflows/*/config/decisions.R
+
+# --- curated gene sets: obtain from their sources (see 03 README) -------------
+data/gene_sets/*.gmt
+
+# --- R / RStudio artifacts ----------------------------------------------------
+.Rproj.user/
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Renviron
+
+# --- OS artifacts -------------------------------------------------------------
+.DS_Store
+
+# --- not yet shared: protein validation ---------------------------------------
+workflows/04_neighborhood_analysis/functions/da_validation.R
+workflows/04_neighborhood_analysis/pipeline/02_da_validation.R
+workflows/04_neighborhood_analysis/config/validation_settings.R
