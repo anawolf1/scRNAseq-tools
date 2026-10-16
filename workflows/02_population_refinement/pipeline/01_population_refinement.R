@@ -180,7 +180,7 @@ for (round_name in round_names) {
   n_genes_before <- nrow(data_obj)
 
   # a malformed step stops the round before preprocessing and clustering
-  validate_refinement_steps(data_obj, round$steps, data_processed_dir)
+  validate_refinement_steps(data_obj, rounds[[round_name]]$steps, data_processed_dir)
 
   # the input as loaded, all genes: the baseline of the exclusion check
   input_obj <- if (isTRUE(steps$exclusion_check) && has_steps) data_obj else NULL
